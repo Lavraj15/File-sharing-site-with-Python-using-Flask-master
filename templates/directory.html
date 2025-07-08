@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+{% extends "layout.html" %}
+{% block body %}
+{% if error3 %}
+<h1 align="center" color="red" class=error><strong></strong>{{ error3 }}
+{% endif %}
+<caption><center><strong>Your files</strong></center></caption>
+
+<table align="center" border="0">
+
+
+{% for i in files %}
+<tr><center>{{i}}</center></tr>
+{% endfor %}
+
+
+</center></table>
+<p>
+
+</p>
+
+<form action="{{ url_for('back') }}" method="POST" class="text-center mt-3">
+  <button type="submit" class="btn btn-primary">⬅ Back to Home Page</button>
+</form>
+
+
+
+			
+{% endblock %}

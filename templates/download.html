@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+{% extends "layout.html" %}
+{% block body %}
+
+	
+<form method="POST">
+ 	
+<div class="login">
+		
+<div class="login-screen">
+			
+<div class="app-title">
+				
+<h1>Input data</h1>
+			
+</div>
+ 
+			
+			
+
+
+<form method="POST">
+  <input type="password" placeholder="Folder Password" name="folder password" required>
+             
+<input type="submit" name="Download" value="Download" class="btn btn-primary btn-large btn-block" >
+
+</form>
+<p> </p>
+<form action="{{ url_for('back') }}" method="POST" class="text-center mt-3">
+  <button type="submit" class="btn btn-primary">⬅ Back to Home Page</button>
+</form>
+   
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+ <p class=flashes><center>
+{% for category, message in messages %}
+<li class="{{ category }}">{{ message }}</li>
+{% endfor %}
+</center>
+</p>
+{% endif %}
+{% endwith %}
+{% if error1 %}
+<p color="red" class=error><center><strong></strong></center></p> {{ error1 }}
+{% endif %}
+			
+</div>
+		
+</div>
+	
+</div>
+
+{% endblock %}

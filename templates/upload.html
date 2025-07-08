@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="login">
+  <div class="login-screen">
+    <div class="app-title">
+      <h2>📤 Upload File</h2>
+    </div>
+
+    <div class="login-form">
+      <form action="{{ url_for('uploadd_file') }}" method="POST" enctype="multipart/form-data">
+        <div class="control-group">
+          <input type="file" name="file" required />
+        </div>
+        <button type="submit" class="btn">Upload</button>
+      </form>
+      <a href="{{ url_for('home_page') }}" class="login-link">← Back to Home</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

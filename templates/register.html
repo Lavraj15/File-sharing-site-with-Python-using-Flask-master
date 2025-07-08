@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css"> 
+
+{% extends "layout.html" %}
+{% block body %}
+
+<form action="/" method="POST">
+  <div class="login">
+    <div class="login-screen">
+      <div class="app-title">
+        <h1>Register</h1>
+      </div>
+
+      <div class="login-form">
+        <div class="control-group">
+          <input type="text" class="login-field" placeholder="Username" name="user" required>
+          <label class="login-field-icon fui-user" for="login-name"></label>
+        </div>
+
+        <div class="control-group">
+          <input type="password" class="login-field" placeholder="Password" name="pass" required>
+          <label class="login-field-icon fui-lock" for="login-pass"></label>
+        </div>
+
+        <div class="control-group">
+          <input type="password" class="login-field" placeholder="Repeat Password" name="repeat_password" required>
+          <label class="login-field-icon fui-lock" for="login-pass"></label>
+        </div>
+
+        <div class="control-group">
+          <input type="password" class="login-field" placeholder="Folder Password" name="folder_password" required>
+          <label class="login-field-icon fui-lock" for="login-pass"></label>
+        </div>
+
+        <input type="submit" name="Registration" value="Register" class="btn btn-primary btn-large btn-block">
+        
+        {% if error %}
+          <p style="color: red; text-align: center;"><strong>{{ error }}</strong></p>
+        {% endif %}
+        
+      </div>
+    </div>
+  </div>
+</form>
+
+{% endblock %}

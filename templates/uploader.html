@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="login">
+  <div class="login-screen">
+    <div class="app-title">
+      <h2>✅ Uploaded!</h2>
+    </div>
+
+    <div class="login-form">
+      <p>File uploaded successfully.</p>
+      <form action="/back" method="POST">
+        <button type="submit" class="btn">⬅ Back to Home</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
